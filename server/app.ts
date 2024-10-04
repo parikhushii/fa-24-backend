@@ -1,5 +1,5 @@
 import AuthenticatingConcept from "./concepts/authenticating";
-import FriendingConcept from "./concepts/friending";
+import FriendingConcept from "./concepts/labeling";
 import PostingConcept from "./concepts/posting";
 import SessioningConcept from "./concepts/sessioning";
 

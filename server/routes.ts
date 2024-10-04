@@ -151,6 +151,46 @@ class Routes {
     const user = Sessioning.getUser(session);
     const fromOid = (await Authing.getUserByUsername(from))._id;
     return await Friending.rejectRequest(fromOid, user);
+
+  // Approves a follow request from an online friend
+  @Router.post("/follow/approve/:a2")
+  
+  // Adds their friend to a specific circle
+  @Router.patch("/circle/:a2/:circleName")
+  
+  // Reserve spots in recommended share for different circles
+  @Router.patch("/recommendations/reserve/:spots/:circleName")
+  
+  // Sync GCal with APPNAME
+  @Router.post("/calendar/sync")
+  
+  // Designates blocks in APPNAME’s calendar as free, hard commitment, or soft commitment
+  @Router.patch("/blocks/designate")
+  
+  // Browses their activity feed, finds something they’ve been meaning to try, and pins it to Wishlist
+  @Router.post("/wishlist")
+  
+  // Browses their activity feed, finds something they really don’t like, and indicates that they are Not Interested
+  @Router.post("/not-interested")
+  
+  // Accepts an invitation from another user
+  @Router.post("/invitation/accept")
+
+  // Sees recommended shares
+  @Router.patch("/recommendations/shares/")
+  
+  // Sends an invitation to a queue of other users
+  @Router.post("/invitation/send")
+  
+  // Invitation expires (No synergy with sessioning)
+  @Router.post("/invitation/expire")
+  
+  // Session expires
+  @Router.post("/session/expire")
+  
+  // Logs out
+  @Router.post("/logout")
+    
   }
 }
 
